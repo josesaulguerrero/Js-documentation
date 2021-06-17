@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>JS documentation </title>
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   
+   <nav id="navbar" class="nav-bar">
+      <img src="https://i.postimg.cc/nz9VP1wV/javascript.png" alt="A javascript logo" class="header-logo">
+      <header>
+         <h1 class="page-title">JS Documentation</h1>
+      </header>
+      <ul>
+         <li><a class="nav-link" href="#Introduction_to_JavaScript">Introduction to JavaScript</a></li>
+         <li><a class="nav-link" href="#JavaScript's_special_features">JavaScript's special features</a></li>
+         <li><a class="nav-link" href="#Data_types_in_JavaScript">Data types in JavaScript</a></li>
+         <li><a class="nav-link" href="#Variables_in_JavaScript">Variables in JavaScript</a></li>
+         <li><a class="nav-link" href="#Commenting_out">Commenting out</a></li>
+         <li><a class="nav-link" href="#Conditionals">Conditionals</a></li>
+         <li><a class="nav-link" href="#Loops_in_JavaScript">Loops in JavaScript</a></li>
+      </ul>
+   </nav>
+
+   <main class="main" id="main-doc">
+
+
+      <section class="main-section" id="Introduction_to_JavaScript">
+         <header class="section-header">
+            <!-- Introduction to JavaScript -->
+            <h2 class="header-title">Introduction to JavaScript</h2>
+         </header>
+         <p class="section-text">
+            JavaScript is a scripting Object-oriented language which allows us to give interactivity to our websites. When you see cool animations, updated content, interactive elements, search bars and much more, JavaScript is likely involved. 
+         </p>
+         <p>
+            It gives us the ability to save values, perform numerical operations, run a piece of code (known as script) when an element is manipulated, make amazing animations, change our HTML, handle information coming from an API (Application Programming Interfaces).
+         </p>
+         <p>Briefly, JavaScript is the one which give us the power to make our websites greater with simple and short pieces of code.</p>
+      </section>
+
+      <section class="main-section" id="JavaScript's_special_features">
+         <header class="section-header">
+            <!-- JavaScript's special features -->
+            <h2 class="section-title">JavaScript's special features</h2>
+         </header>
+         <p>JavaScript has certain features that differentiate it from the rest, a quick example, when you write: </p>
+         <code>var sum = '12' + 5;</code>
+         <p>The value of "sum" will be '125'. Weird, right ?</p>
+         <p>let's go deeper on these special features</p>
+         <ul class="list-container">
+            <li class="item"><h3 class="item-title">Weak-typed: </h3><p>In JavaScript, the data types are not defined, therefore, there is no difference between declaring a text string or a numerical variable.</p><code>var string = 'hello world'; <br> var number = 17;</code><p>Also, there is no need to use the semicolon as we would in other languages. We could simply write: </p>
+            <code>var string = 'hello world' <br> var number = 17</code> <p>And it would work without giving us any errors !</p></li>
+            <li class="item"><h3 class="item-title">Interpreted: </h3><p>Unlike other languages, JavaScript does not need to be compiled beforehand, you can paste your script on your favorite browser's console and that's all, the browser will do the work and you will see how the code runs in real time.</p><img src="https://i.postimg.cc/K8B0n9S7/image.png" alt="an example"><p>As you saw, you can code and test your scripts on your favorite browser.</p></li>
+            <li class="item"><h3 class="item-title">Backwards: </h3><p>This is an interesting feature of this language, why? Because we can use both the old and new syntax and the code will run normally, this is due to its backwards ability that gives us the power to use the old syntax without worry.</p><img src="https://i.postimg.cc/Z5sDY9S2/image.png" alt="a code example"><p>'var' is an old way of declaring variables and 'let' is the newer way (we will cover that in further topics) and as we see, the code run as usual, no errors were logged on the console.</p></li>
+         </ul>
+      </section>
+
+      <section class="main-section" id="Data_types_in_JavaScript">
+         <header class="section-header">
+            <!-- Data types in JavaScript -->
+            <h2 class="section-title">Data types in JavaScript</h2>
+         </header>
+         <p>This language counts with two data types, primitive and non-primitive data values, also known as objects. let's dive into these data types: </p>
+         <h3>Primitive data values</h3>
+         <ul class="list-container">
+            <li><h4>Number: </h4><p>These are just numerical data values.</p><code>var number = 123;</code></li>
+            <li><h4>String: </h4><p>It is text written within quotation marks.</p><code>var string = "hello world"; <br> var anotherString = </code></li>
+            <li><h4>Boolean: </h4><p>This data value is really useful, because it tells us if something is true or false.</p><code>var boolean = true; <br> var anotherBoolean = false;</code></li>
+            <li><h4>Empty values: </h4><p>These data values are a bit confusing for some people, but here you will completely learn the difference between them. Within this category we find Undefined and Null values; undefined variables are those one which have never been declared or created and null variables refer to the ones which have been declared without any value.</p></li>
+         </ul>
+         <h3>Non-primitive data values</h3>
+         <ul class="list-container">
+            <li><h4>Arrays: </h4><p>It's a linear data set which allows us to save many values into one variable, like this: </p> <code>Var array = [1,2,3,4]; <br> var arrayWithStrings = ['a', 'b', 'c'];</code> <p>to access its values we put: </p><code>array[anyPosition]</code><p>the positons start from 0, therefore array[1] is equal to 2.</p></li>
+            <li><h4>Objects: </h4><p>These data types are really important in object-oriented programming, because we can save values here, with a respective key: </p><code>var dog = { <br> &nbsp;&nbsp;&nbsp;name: 'Bailey', <br> &nbsp;&nbsp; age: 17 <br>}</code><p>and to access these values we write: </p><code>dog.name</code></li>
+         </ul>
+      </section>
+
+      <section class="main-section" id="Variables_in_JavaScript">
+         <header class="section-header">
+            <!-- Variables in JavaScript -->
+            <h2 class="section-title">Variables in JavaScript</h2>
+         </header>
+         <p>As we showed you in previous topics, there are different variable types in JavaScript. Let's go further in this topic: </p>
+         <ul class="list-container">
+            <li><h3>Var: </h3><p>It's an old mean to declare variables, but it had some problems and that is why there are another kind of variables.</p><code>var varVariable = 123;</code></li>
+            <li><h3>Let: </h3><p>This way to declare variables is newer ann it has solved many of the problems caused by 'var', it works quite similarly though.</p><code>let letVariable = 123;</code></li>
+            <li><h3>Const: </h3><p>Once we declare a variable with this keyword, we can not change its value with any method, it will have an eternal value.</p><code>const constVariable = 123;</code></li>
+         </ul>
+      </section>
+
+      <section class="main-section" id="Commenting_out">
+         <header class="section-header">
+            <h2 class="section-title">Commenting out</h2>
+         </header>
+         <p>The comments are something really useful, due to their ability to "hide" code, when we comment out a piece of code, this piece won't be ran by the browser, altough we can see it and it is still in the script. There are two kinds of comments in JavaScript, let's check them out: </p>
+         <ul class="list-container">
+            <li><h3>Single-line comments: </h3><p>The single-line comments are those which give us the chance to comment out only one line, no more. We write them like this: </p><code>// let number = 123; </code><p>As shown above, to write a single-line comment, we put a pair of slashes before the code line we wanna comment out.</p></li>
+            <li><h3>Multiline comments: </h3><p>These ones can comment a whole script without any problem and we can skip this whole piece of code, because the browser will ignore it. This is their syntax: </p><code>/* let number = 123;<br> console.log(number)*/</code><p>The way to create them is putting the code piece we wanna skip within /* */.</p></li>
+         </ul>
+      </section>
+
+      <section class="main-section" id="Conditionals">
+         <header class="section-header">
+            <!-- Conditionals -->
+            <h2 class="section-title">Conditionals</h2>
+         </header>
+         <p>All programming languages count with if statement, and that is why we can define if something is true or false. Let's read more detailed information on it: </p>
+         <h3>If statement</h3>
+         <ul class="list-container">
+            <li>
+               <p>This statement gets a certain condition and based on it, it runs a piece of code or another, that is the reason why it is so useful, because we can run a certain code or simply skip it if the condition is false. The sintax is: </p>
+               <code>if(condition) { <br> 
+               &nbsp;&nbsp; // the code we want to run if the condition is true <br>
+               }</code>
+            </li>
+            <li>
+               <p>The switch statement is used to perform different actions based on different conditions.The structure is: </p><code>switch(expression) { <br>
+                  &nbsp;&nbsp;case x: <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;// code block <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;break; <br>
+                  &nbsp;&nbsp;case y: <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;// code block <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;break; <br>
+                  &nbsp;&nbsp;default: <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;// code block <br>
+               }</code> <p>This is how it works: </p>
+               <ul class="list-container">
+                  <li>The switch expression is evaluated once.</li> 
+                  <li>The value of the expression is compared with the values of each case.</li> 
+                  <li>If there is a match, the associated block of code is executed.</li> 
+                  <li>If there is no match, the default code block is executed.</li> 
+               </ul>
+            </li>
+         </ul>
+      </section>
+
+      <section class="main-section" id="Loops_in_JavaScript">
+         <header class="section-header">
+            <h2 class="section-title">Loops in JavaScript</h2>
+         </header>
+         <p>The loops are control structures that run a piece of code once or several times as specified. This is useful when we need to go through an array or do something while a codition is true. There are two sorts of loops, while loops and for loops, let's give them a look.</p>
+         <ul class="list-container">
+            <li><h3>For loop: </h3> <p>This loop runs a piece of code a certain number of times, we must define this number beforehand, otherwise the loop won't work. The syntax is: </p><code>for(iterationVariable; numberOfTimes; increment) { <br> 
+            &nbsp;&nbsp; // piece of code <br> }</code> <p>it should be clarified that the semicolons within the parethesis are necessary.</p></li>
+            <li><h3>While loop: </h3><p>With this control structure we can execute some code as long as the condition is true, besides, we do not have to define how many times we want the loop to run. Its structure is: </p><code>while(condition){ <br>
+            &nbsp;&nbsp;// code to be ran <br> }</code></li>
+         </ul>
+      </section>
+
+      <section class="reference">
+         <p>For further information on JavaScript, please go to the official documentation on <a href="https://developer.mozilla.org/">MDN</a></p>
+      </section>
+
+   </main>
+
+</body>
+</html>
