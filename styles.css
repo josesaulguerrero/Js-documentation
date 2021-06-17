@@ -1,0 +1,234 @@
+/* universal styles start here */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root {
+   --font-family: 'Montserrat', sans-serif;
+   --color: rgb(217, 249, 250);
+   --nav-color: rgb(5, 4, 39);
+   --main-background-color: rgba(3, 12, 58, 0.795);
+   --nav-background-color: rgb(161, 188, 230);
+}
+
+html {
+   font-size: 62.5%;
+   scroll-behavior: smooth;
+}
+
+body {
+   max-width: 100%;
+   height: auto;
+   display: grid;
+   overflow-x: hidden;
+   grid-template: 100px 1fr / minmax(280px, 330px) repeat(2, 1fr);
+   grid-template-areas: 'nav nav nav'
+                        'main main main';
+                        /* gap: 15px; */
+   font-size: 1.8rem;
+   font-family: var(--font-family);
+   color: var(--color);
+   background-image: url('assets/markus-spiske-MgtHZ4zlC1U-unsplash.jpg');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+}
+
+.list-container {
+   padding: 20px 0 0 20px;
+}
+
+img {
+   width: 100px;
+}
+
+/* universal styles end here */
+
+/* nav styles start here */
+
+.nav-bar {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   max-height: 100vh;
+   grid-area: nav;
+   /* justify-self: center; */
+   position: sticky;
+   top: 0%;
+   padding: 10px;
+   color: var(--nav-color);
+   background-color: var(--nav-background-color);
+}
+
+.nav-header {
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+}
+
+.nav-header img {
+   width: 60px;
+}
+
+.page-title {
+   font-size: 2.1rem;
+}
+
+.burger-icon {
+   min-width: 30px;
+   height: 25px; 
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   z-index: 2;
+}
+
+.line1, .line2, .line3 {
+   width: 100%;
+   height: 5px;
+   background-color: white;
+   border-radius: 5px;
+   transition: all .3s ease-in-out;
+}
+
+.line1 {
+   transform-origin: left top;
+}
+.line3 {
+   transform-origin: left bottom;
+}
+
+.line1--rotated {
+   transform: rotate(45deg);
+}
+
+.line2--hidden {
+   visibility: hidden;
+   opacity: 0;
+}
+
+.line3--rotated {
+   transform: rotate(-45deg);
+}
+
+.nav-bar .options-container--hidden {
+   transition: all .3s;
+   visibility: hidden;
+   opacity: 0;
+   transform: translateX(100%);
+}
+
+.options-container {
+   width: 100%;
+   min-height: 640px;
+   height: 100%;
+   /* min-height: 100vh; */
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   position: fixed;
+   top: 0;
+   left: 0;
+   /* right: 0; */
+   background-color: var(--nav-background-color);
+   visibility: visible;
+   opacity: 1;
+   z-index: 1;
+   transition: all .5s;
+   transform: none;
+}
+
+.nav-bar li {
+   width: 100%;
+   /* height: 35px; */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   list-style: none;
+   font-size: 2.2rem;
+   /* transition: all .5s; */
+   /* margin: px 0; */
+   padding: 5px;
+}
+
+.nav-bar li:hover {
+   background-color: rgb(138, 147, 238);
+}
+
+
+/* nav styles end here */
+
+/* main styles start here */
+
+.main {
+   width: 100%;
+   height: 100%;
+   grid-area: main;
+   padding: 10px;
+   background-color: var(--main-background-color)
+}
+
+
+/* main styles end here */
+
+
+
+/* media queries */
+
+@media(min-width: 900px){
+   body {
+      grid-template-areas: 'nav main main'
+                           'nav main main';
+   }
+   .page-title {
+      font-size: 2.5rem;
+   }
+   .burger-icon {
+      display: none;
+   }
+   .nav-bar {
+      flex-direction: column;
+      justify-content: flex-start;
+   }
+   nav.nav-bar .options-container--hidden {
+      visibility: visible;
+      opacity: 1;
+      transform: none;
+   }
+   .options-container {
+      width: 100%;
+      position: static;
+      height: auto;
+      min-height: auto;
+      margin-top: 50px;
+      /* align-items: flex-start; */
+   }
+   .options-container li {
+      justify-content: flex-start;
+      margin: 5px 0;
+   }
+
+   .nav-link{
+      text-decoration: none;
+      color: var(--nav-color);
+      transition: all .5s ease;
+   }
+
+   .nav-link:hover, a:hover {
+      color: rgb(7, 65, 80);
+      text-decoration: underline;
+   }
+
+   .main {
+      padding: 30px;
+   }
+}

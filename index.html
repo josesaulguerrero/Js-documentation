@@ -6,15 +6,21 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>JS documentation </title>
    <link rel="stylesheet" href="styles.css">
+   <script src="index.js" defer></script>
 </head>
 <body>
    
    <nav id="navbar" class="nav-bar">
-      <img src="https://i.postimg.cc/nz9VP1wV/javascript.png" alt="A javascript logo" class="header-logo">
-      <header>
-         <h1 class="page-title">JS Documentation</h1>
+      <header class="nav-header">
+         <img src="https://i.postimg.cc/nz9VP1wV/javascript.png" alt="A javascript logo" class="header-logo">
+         <h1 class="page-title">JS <br> Documentation</h1>
       </header>
-      <ul>
+      <div class="burger-icon" onclick="toggleClass()">
+         <div class="line1" id="line1"></div>
+         <div class="line2" id="line2"></div>
+         <div class="line3" id="line3"></div>
+      </div>
+      <ul class="options-container options-container--hidden" id="burger-menu">
          <li><a class="nav-link" href="#Introduction_to_JavaScript">Introduction to JavaScript</a></li>
          <li><a class="nav-link" href="#JavaScript's_special_features">JavaScript's special features</a></li>
          <li><a class="nav-link" href="#Data_types_in_JavaScript">Data types in JavaScript</a></li>
@@ -52,10 +58,10 @@
          <p>The value of "sum" will be '125'. Weird, right ?</p>
          <p>let's go deeper on these special features</p>
          <ul class="list-container">
-            <li class="item"><h3 class="item-title">Weak-typed: </h3><p>In JavaScript, the data types are not defined, therefore, there is no difference between declaring a text string or a numerical variable.</p><code>var string = 'hello world'; <br> var number = 17;</code><p>Also, there is no need to use the semicolon as we would in other languages. We could simply write: </p>
-            <code>var string = 'hello world' <br> var number = 17</code> <p>And it would work without giving us any errors !</p></li>
+            <li class="item"><h3 class="item-title">Weak-typed: </h3><p>In JavaScript, the data types are not defined, therefore, there is no difference between declaring a text string or a numerical variable.</p><code>var helloWorld = 'hello world'; <br> var seventeen = 17;</code><p>Also, there is no need to use the semicolon as we would in other languages. We could simply write: </p>
+            <code>var helloWorld = 'hello world' <br> var seventeen = 17</code> <p>And it would work without giving us any errors !</p></li>
             <li class="item"><h3 class="item-title">Interpreted: </h3><p>Unlike other languages, JavaScript does not need to be compiled beforehand, you can paste your script on your favorite browser's console and that's all, the browser will do the work and you will see how the code runs in real time.</p><img src="https://i.postimg.cc/K8B0n9S7/image.png" alt="an example"><p>As you saw, you can code and test your scripts on your favorite browser.</p></li>
-            <li class="item"><h3 class="item-title">Backwards: </h3><p>This is an interesting feature of this language, why? Because we can use both the old and new syntax and the code will run normally, this is due to its backwards ability that gives us the power to use the old syntax without worry.</p><img src="https://i.postimg.cc/Z5sDY9S2/image.png" alt="a code example"><p>'var' is an old way of declaring variables and 'let' is the newer way (we will cover that in further topics) and as we see, the code run as usual, no errors were logged on the console.</p></li>
+            <li class="item"><h3 class="item-title">Backwards: </h3><p>This is an interesting feature of this language, why? Because we can use both the old and new syntax and the code will run normally, this is due to its backwards ability that gives us the power to use the old syntax without worry.</p><img src="https://i.postimg.cc/Z5sDY9S2/image.png" alt="a code example"><p>'var' is an old way of declaring variables and 'let' is the newer way (we will cover that in the following topics) and as we see, the code run as usual, no errors were logged on the console.</p></li>
          </ul>
       </section>
 
@@ -67,9 +73,9 @@
          <p>This language counts with two data types, primitive and non-primitive data values, also known as objects. let's dive into these data types: </p>
          <h3>Primitive data values</h3>
          <ul class="list-container">
-            <li><h4>Number: </h4><p>These are just numerical data values.</p><code>var number = 123;</code></li>
-            <li><h4>String: </h4><p>It is text written within quotation marks.</p><code>var string = "hello world"; <br> var anotherString = </code></li>
-            <li><h4>Boolean: </h4><p>This data value is really useful, because it tells us if something is true or false.</p><code>var boolean = true; <br> var anotherBoolean = false;</code></li>
+            <li><h4>Number: </h4><p>These are just numerical data values.</p><code>var OneTwoThree = 123;</code></li>
+            <li><h4>String: </h4><p>It is text written within quotation marks.</p><code>var hello = "hello world"; <br> var anotherString = 'hello world' </code></li>
+            <li><h4>Boolean: </h4><p>This data value is really useful, because it tells us if something is true or false.</p><code>var aBoolean = true; <br> var anotherBoolean = false;</code></li>
             <li><h4>Empty values: </h4><p>These data values are a bit confusing for some people, but here you will completely learn the difference between them. Within this category we find Undefined and Null values; undefined variables are those one which have never been declared or created and null variables refer to the ones which have been declared without any value.</p></li>
          </ul>
          <h3>Non-primitive data values</h3>
