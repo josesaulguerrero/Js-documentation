@@ -10,9 +10,9 @@
 
 :root {
    --font-family: 'Montserrat', sans-serif;
-   --color: rgb(217, 249, 250);
+   --color: rgb(233, 246, 247);
    --nav-color: rgb(5, 4, 39);
-   --main-background-color: rgba(3, 12, 58, 0.795);
+   --main-background-color: rgba(2, 8, 41, 0.87);
    --nav-background-color: rgb(161, 188, 230);
 }
 
@@ -160,8 +160,10 @@ img {
    padding: 5px;
 }
 
-.nav-bar li:hover {
-   background-color: rgb(138, 147, 238);
+.nav-link{
+   text-decoration: none;
+   color: var(--nav-color);
+   transition: all .5s ease;
 }
 
 
@@ -217,10 +219,8 @@ img {
       margin: 5px 0;
    }
 
-   .nav-link{
-      text-decoration: none;
-      color: var(--nav-color);
-      transition: all .5s ease;
+   .nav-bar li:hover {
+      background-color: rgb(138, 147, 238);
    }
 
    .nav-link:hover, a:hover {
