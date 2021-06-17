@@ -14,6 +14,7 @@
    --nav-color: rgb(5, 4, 39);
    --main-background-color: rgba(2, 7, 34, 0.945);
    --nav-background-color: rgb(161, 188, 230);
+   --code-background: rgba(86, 151, 226, 0.678);
 }
 
 html {
@@ -209,7 +210,7 @@ img {
    display: flex;
    flex-direction: column;
    padding: 10px 15px;
-   background-color: rgba(86, 151, 226, 0.678);  
+   background-color: var(--code-background);  
    border-radius: 15px;
    margin: 10px 0;
 }
