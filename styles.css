@@ -196,6 +196,13 @@ img {
    margin: 10px 0 0 0;
 }
 
+.list-container img {
+   width: 100%;
+   max-width: 650px;
+   border-radius: 20px;
+   /* box-shadow: 0 5px 15px var(--nav-background-color); */
+}
+
 .main-section code {
    width: 100%;
    height: auto;
